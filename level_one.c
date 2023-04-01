@@ -12,7 +12,7 @@ void level_one() {
     "You put your bet an guess if coin lands heada or tails.\n"
     "If you win you gain twice the amount guessed.>\n"
     "If you loose you loose the whole amount.\n"
-    "You win if you gain 100_000 money");
+    "You win if you gain 100_000 moneroji");
 
     puts("\n\n\n");
 
@@ -28,7 +28,7 @@ void level_one() {
 void level_one_game() {
     srand(time(NULL)); //initialize random number generator
 
-    unsigned int amount = 100; //initial value is 100 money
+    unsigned int amount = 100; //initial value is 100 moneroji
     int bet_amount;
     int rand_value; // 1 represents tails; 2 represents heads
     int user_guess;
@@ -62,7 +62,7 @@ void level_one_game() {
         rand_value = rand()%2+1;
 
         if(rand_value == user_guess) {
-            printf("Congratulations! You gain %d money.\n", bet_amount);
+            printf("Congratulations! You gain %d moneroji.\n", bet_amount);
             amount += bet_amount;
         }else {
             puts("Bad luck, you gain nothing");
