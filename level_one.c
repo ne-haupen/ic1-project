@@ -3,11 +3,11 @@
 #include <time.h>
 #include "util.h"
 
-void print_level_one_source();
 void level_one_game();
 
 void level_one() {
     int user_answer;
+    print_file_contents("banners/level_one_banner.txt");
     printf("Level one is head or tails guessing game.\n"
     "You put your bet an guess if coin lands heada or tails.\n"
     "If you win you gain twice the amount guessed.>\n"
@@ -16,13 +16,7 @@ void level_one() {
 
     puts("\n\n\n");
 
-    puts("Do you want to inspect the source code?");
-    puts("1) yes");
-    scanf("%d", &user_answer);
-
-    if(user_answer == 1) {
-        print_level_one_source();
-    }
+    print_source("level_one.c");
 
     puts("\n\n\n");
 
@@ -72,6 +66,7 @@ void level_one_game() {
             amount += bet_amount;
         }else {
             puts("Bad luck, you gain nothing");
+            amount -= (bet_amount < 0)? -bet_amount:bet_amount;
         }
     }
 
@@ -82,8 +77,4 @@ void level_one_game() {
         puts("exiting...");
         exit(-1);
     }
-}
-
-void print_level_one_source() {
-    print_file_contents("level_one_source.txt");
 }

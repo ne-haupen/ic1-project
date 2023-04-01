@@ -21,3 +21,14 @@ void print_file_contents(char* filename) {
   
     fclose(fptr);
 }
+
+void print_source(char* filename) {
+    int user_answer;
+    puts("Do you want to print the source code?");
+    puts("1) yes");
+
+    scanf("%d", &user_answer);
+    if(user_answer == 1) {
+        print_file_contents(filename);
+    }
+}
