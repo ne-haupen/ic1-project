@@ -26,7 +26,7 @@ void level_one() {
 
     puts("\n\n\n");
 
-    
+
     level_one_game();
 
 }
@@ -45,7 +45,7 @@ void level_one_game() {
         scanf("%d", &bet_amount);
         //printf("bet_amount is %d", bet_amount);
 
-        while(amount - bet_amount < 0){
+        while(bet_amount > (int)amount){
             printf("You can't bet more than you have. Choose value thats lower or equal than your funds.\n");
             puts("Bet amount: ");
             scanf("%d", &bet_amount);
