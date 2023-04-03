@@ -72,6 +72,7 @@ void level_one_game() {
 
     if(amount > 100000) {
         printf("You won. Total winning are %u\n", amount);
+        srand(0);
     }else {
         puts("You lost :( better luck next time");
         puts("exiting...");

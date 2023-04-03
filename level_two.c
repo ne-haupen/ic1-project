@@ -15,7 +15,7 @@ void level_two() {
     while(tries != 0) {
         printf("provide correct key to get to third level. Tries left: %d\n", tries);
         puts("key:");
-        scanf("%d", &key);
+        scanf("%u", &key);
         
         mix = generated;
 
@@ -24,7 +24,7 @@ void level_two() {
         }
 
 
-        printf("mix is %x\n", mix);
+        //printf("mix is %x\n", mix);
         if( mix == 0xdeadbeef ){
             puts("continuing to level three");
             return;

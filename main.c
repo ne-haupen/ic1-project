@@ -5,6 +5,6 @@
 #include "level_two.h"
 
 int main() {
-    //level_one();
+    level_one();
     level_two();
 }
