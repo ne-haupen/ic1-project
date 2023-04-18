@@ -5,13 +5,10 @@
 
 
 
-void level_two() {
+void main() {
     unsigned int generated = rand();
     int tries = 3;
     unsigned int key, mix;
-    print_file_contents("banners/level_two_banner.txt");
-    print_source("level_two.c");
-
     while(tries != 0) {
         printf("provide correct key to get to third level. Tries left: %d\n", tries);
         puts("key:");

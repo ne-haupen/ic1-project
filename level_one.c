@@ -3,29 +3,19 @@
 #include <time.h>
 #include "util.h"
 
-void level_one_game();
 
 void level_one() {
     int user_answer;
-    print_file_contents("banners/level_one_banner.txt");
     printf("Level one is head or tails guessing game.\n"
     "You put your bet an guess if coin lands heada or tails.\n"
     "If you win you gain twice the amount guessed.>\n"
     "If you loose you loose the whole amount.\n"
     "You win if you gain 100_000 moneroji");
 
-    puts("\n\n\n");
-
-    print_source("level_one.c");
-
-    puts("\n\n\n");
-
-
-    level_one_game();
-
 }
 
-void level_one_game() {
+void main() {
+    level_one();
     srand(time(NULL)); //initialize random number generator
 
     unsigned int amount = 100; //initial value is 100 moneroji
