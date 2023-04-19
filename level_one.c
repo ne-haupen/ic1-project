@@ -37,12 +37,15 @@ void main() {
         }
 
         puts("Heads or tails?");
+        puts("0) end game");
         puts("1) heads");
         puts("2) tails");
 
         puts("Guess: ");
         scanf("%d", &user_guess);
-
+        if(!user_guess){
+            exit(-1);
+        }
         while(user_guess != 1 && user_guess != 2) {
             puts("you can only guess 1 or 2:");
             scanf("%d", &user_guess);
