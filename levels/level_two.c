@@ -1,15 +1,13 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
-
 void main() {
     unsigned int generated = rand();
     int tries = 3;
     unsigned int key, mix;
     while(tries != 0) {
         printf("provide correct key to get to third level. Tries left: %d\n", tries);
-        puts("key:");
+        puts("key:"); // 3039275914
         scanf("%u", &key);
         
         mix = generated;
@@ -19,7 +17,7 @@ void main() {
         }
 
 
-        //printf("mix is %x\n", mix);
+        printf("mix is %x\n", mix);
         if( mix == 0xdeadbeef ){
             puts("continuing to level three");
             return;
