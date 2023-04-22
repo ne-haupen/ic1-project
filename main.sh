@@ -29,3 +29,4 @@ select yn in "Yes" "No"; do
 done
 ./unprotected/exploitable_3
 clear
+cat banners/victory_banner.txt
