@@ -23,7 +23,10 @@ int main(void)
     {
         printf ("\n Root privileges given to the user \n");
         return 0;
+    } else {
+        printf ("\n Failed to login \n");
+        return 1;
     }
-    return 1;
+    
     
 }
