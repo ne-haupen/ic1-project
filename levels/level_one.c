@@ -69,6 +69,6 @@ int main(void) {
     }else {
         puts("You lost :( better luck next time");
         puts("exiting...");
-        return -1;
+        return 1;
     }
 }

@@ -24,6 +24,6 @@ int main(void)
         printf ("\n Root privileges given to the user \n");
         return 0;
     }
-    return -1;
+    return 1;
     
 }

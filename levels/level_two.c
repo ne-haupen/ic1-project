@@ -9,7 +9,7 @@ int main(int argc, char *argv[]) {
     }
     unsigned int key, mix;
     while(tries != 0) {
-        //printf("provide correct key to get to third level. Tries left: %d\n", tries);
+        printf("provide correct key to get to third level. Tries left: %d\n", tries);
         if (argv[1]){         
             key = atoi(argv[0]);
         } else {
@@ -29,8 +29,8 @@ int main(int argc, char *argv[]) {
             puts("continuing to level three");
             return 0;
         }
-        //puts("wrong key");
+        puts("wrong key");
         tries--;
     }
-    return -1;
+    return 1;
 }
