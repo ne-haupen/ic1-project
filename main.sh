@@ -8,6 +8,11 @@ select yn in "Yes" "No"; do
     esac
 done
 ./unprotected/exploitable_1
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "KONEC HRY. vysledek: prohra"
+    exit -1;
+fi
 clear
 cat banners/level_two_banner.txt
 echo "Do you wish to show source code for level two?"
@@ -18,6 +23,11 @@ select yn in "Yes" "No"; do
     esac
 done
 ./unprotected/exploitable_2
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "KONEC HRY. vysledek: prohra"
+    exit -1;
+fi
 clear
 cat banners/level_three_banner.txt
 echo "Do you wish to show source code for level three?"
@@ -28,5 +38,10 @@ select yn in "Yes" "No"; do
     esac
 done
 ./unprotected/exploitable_3
+retVal=$?
+if [ $retVal -ne 0 ]; then
+    echo "KONEC HRY. vysledek: prohra"
+    exit -1;
+fi
 clear
 cat banners/victory_banner.txt
