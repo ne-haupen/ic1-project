@@ -13,7 +13,7 @@ void level_one() {
 
 }
 
-void main() {
+int main(void) {
     level_one();
     srand(time(NULL)); //initialize random number generator
 
@@ -65,9 +65,10 @@ void main() {
     if(amount > 100000) {
         printf("You won. Total winning are %u\n", amount);
         srand(0);
+        return 0;
     }else {
         puts("You lost :( better luck next time");
         puts("exiting...");
-        exit(-1);
+        return -1;
     }
 }
