@@ -22,7 +22,8 @@ int main(void)
     if(pass)
     {
         printf ("\n Root privileges given to the user \n");
+        return 0;
     }
-
-    return 0;
+    return -1;
+    
 }
