@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
         if (argv[1]){         
             key = atoi(argv[0]);
         } else {
-            puts("key:"); // 3039275914
+            puts("key:");
             scanf("%u", &key);
         }
         
