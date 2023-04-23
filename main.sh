@@ -1,4 +1,5 @@
 #!/bin/bash
+
 cat banners/level_one_banner.txt
 echo "Do you wish to show source code for level one?";
 select yn in "Yes" "No"; do
@@ -8,6 +9,10 @@ select yn in "Yes" "No"; do
     esac
 done
 ./unprotected/exploitable_1
+if [ $? -ne 0 ]; then 
+  echo "Mission failed";
+  exit 1; 
+fi
 clear
 cat banners/level_two_banner.txt
 echo "Do you wish to show source code for level two?"
@@ -18,6 +23,10 @@ select yn in "Yes" "No"; do
     esac
 done
 ./unprotected/exploitable_2
+if [ $? -ne 0 ]; then 
+  echo "Mission failed";
+  exit 1; 
+fi
 clear
 cat banners/level_three_banner.txt
 echo "Do you wish to show source code for level three?"
@@ -27,6 +36,10 @@ select yn in "Yes" "No"; do
         "No") echo "program starting ..."; break;
     esac
 done
-./unprotected/exploitable_3
+./unprotected/exploitable_3 
+if [ $? -ne 0 ]; then 
+  echo "Mission failed";
+  exit 1; 
+fi
 clear
 cat banners/victory_banner.txt
