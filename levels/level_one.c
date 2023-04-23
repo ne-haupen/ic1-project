@@ -1,31 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "util.h"
 
-void level_one_game();
 
 void level_one() {
     int user_answer;
-    print_file_contents("banners/level_one_banner.txt");
     printf("Level one is head or tails guessing game.\n"
     "You put your bet an guess if coin lands heada or tails.\n"
     "If you win you gain twice the amount guessed.>\n"
     "If you loose you loose the whole amount.\n"
     "You win if you gain 100_000 moneroji");
 
-    puts("\n\n\n");
-
-    print_source("level_one.c");
-
-    puts("\n\n\n");
-
-
-    level_one_game();
-
 }
 
-void level_one_game() {
+int main(void) {
+    level_one();
     srand(time(NULL)); //initialize random number generator
 
     unsigned int amount = 100; //initial value is 100 moneroji
@@ -47,12 +36,15 @@ void level_one_game() {
         }
 
         puts("Heads or tails?");
+        puts("0) end game");
         puts("1) heads");
         puts("2) tails");
 
         puts("Guess: ");
         scanf("%d", &user_guess);
-
+        if(!user_guess){
+            exit(-1);
+        }
         while(user_guess != 1 && user_guess != 2) {
             puts("you can only guess 1 or 2:");
             scanf("%d", &user_guess);
@@ -73,9 +65,10 @@ void level_one_game() {
     if(amount > 100000) {
         printf("You won. Total winning are %u\n", amount);
         srand(0);
+        return 0;
     }else {
         puts("You lost :( better luck next time");
         puts("exiting...");
-        exit(-1);
+        return 1;
     }
 }
